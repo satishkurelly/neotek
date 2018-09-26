@@ -38,10 +38,18 @@
    <link rel="stylesheet" href="css/style.css">
    <!-- Responsive styles-->
    <link rel="stylesheet" href="css/responsive.css">
+
+
+   <script
+           src="http://code.jquery.com/jquery-3.3.1.min.js"
+           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+           crossorigin="anonymous"></script>
    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
    <!--if lt IE 9
     script(src='js/html5shiv.js')
     script(src='js/respond.min.js')
+
+
     -->
 </head>
 
@@ -387,6 +395,89 @@
       </div>
       <!-- End Back to Top-->
 
+      <div class="cookiewarning bg-warning">
+         <h3>Stiamo utilizzando i cookie</h3>
+         <p>Il sito utilizza i cookie per ricordare le impostazioni e le statistiche. Il sito utilizza i cookie da Google Analytics per misurare il traffico sul sito.</p>
+         <span class="btn btn-warning btn-xl">Accettare</span>
+      </div>
+
+      <style>
+         body.cookiewarning {
+            padding-bottom: 15em;
+         }
+         body div.cookiewarning {
+            display: none;
+         }
+         body.cookiewarning div.cookiewarning {
+            padding: 1em;
+            display: block;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(0,0,0,.8);
+            color: white;
+         }
+
+         body .removecookie {
+            display: inline-block;
+         }
+
+         body.cookiewarning .removecookie {
+            display: none;
+         }
+
+      </style>
+
+      <script>
+          function createCookie(name, value, days) {
+              if (days) {
+                  var date = new Date();
+                  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                  var expires = "; expires=" + date.toGMTString();
+              } else var expires = "";
+              document.cookie = name + "=" + value + expires + "; path=/";
+          }
+
+          function readCookie(name) {
+              var nameEQ = name + "=";
+              var ca = document.cookie.split(';');
+              for (var i = 0; i < ca.length; i++) {
+                  var c = ca[i];
+                  while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+              }
+              return null;
+          }
+
+          function eraseCookie(name) {
+              createCookie(name, "", -1);
+          }
+
+          var $body = $("body"),
+              sCookieName = "cookiewarning",
+              $cookiewarning = $("div." + sCookieName);
+
+          function setCookieWarning(active) {
+              (!!active) ? $body.addClass(sCookieName): $body.removeClass(sCookieName)
+          }
+
+          $cookiewarning.on("click", function() {
+              createCookie(sCookieName, 1, 365)
+              setCookieWarning(false);
+          });
+
+          // cookie warning
+          if (readCookie(sCookieName) != 1) {
+              setCookieWarning(true);
+          }
+
+          $(".removecookie").on("click", function() {
+              eraseCookie(sCookieName);
+              setCookieWarning(false);
+          })
+
+      </script>
       <!--
       Javascript Files
       ==================================================
