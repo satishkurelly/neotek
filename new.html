@@ -179,7 +179,7 @@ console.log('get cookie')
 
          }
          else {
-             console('else cooki');
+             console.log('else cooki');
              document.getElementById("cookie-banner1").style.display = "none";
          }
      }
@@ -187,7 +187,7 @@ console.log('get cookie')
 
      // Function cookieYes() that installs the cookie
      function cookieYes() {
-         console('inside cookie yes');
+         console.log('inside cookie yes');
          var d = new Date();
          d.setTime(d.getTime() + (cookieLife * 24 * 60 * 60 * 1000));
          var expires = "expires=" + d.toUTCString();
