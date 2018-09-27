@@ -104,8 +104,10 @@
 
         <button class="btn-danger" onclick="close()">Click</button>
          <div class="close-cookie col-1 pr-0 pl-0" onclick="close()"><button class="cookie-close-icon float-right circle-outline"  onclick="close()" role="button"><span class="sr-only">Close</span></button></div></div>
- </div></div>
 
+     <button onclick="myFunction()">Click me</button>
+ </div></div>
+ <button onclick="myFunction()">Click me</button>
  </body>
 
 <script>
@@ -115,6 +117,14 @@
     }
 
 </script>
+
+
+ <script>
+     function myFunction() {
+         document.getElementById("demo").innerHTML = "Hello World";
+         console.log('onclick');
+     }
+ </script>
 
 
 
