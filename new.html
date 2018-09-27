@@ -133,7 +133,7 @@
 
      // This function checks if the user has already accepted the cookies
      function getCookie() {
-
+console.log('get cookie')
          var name = "cookie_yes" + "=";
          var ca = document.cookie.split(';');
          for(var i = 0; i < ca.length; i++) {
@@ -146,9 +146,9 @@
 
      // If cookie has not been accept, show banner
      function checkCookie() {
-
+         console.log('check cokie cookie')
          if (!getCookie()) {
-
+             console.log('!get cookie')
              // Create button "Yes" with text
              var newbutton1 = document.createElement("button");
              newbutton1.setAttribute("id","yes");
