@@ -882,6 +882,14 @@
         <!-- button end-->
     </div>
     <!-- End Back to Top-->
+    <div class="cookie-footer text-left"><div class="container">
+        <div class="row"><div class="col-11 p-0" role="alert" tabindex="0">
+            <div class="alert-cookie-details"><div class="cookie-desc cookie-display-block">
+                <p class="mb-0">By continuing to browse, you consent to our use of cookies. To know more please refer to our&nbsp;
+                    <a href="/content/www/en_US/privacy-and-security.html">Cookie and Privacy Policies.</a></p></div></div></div>
+            <div class="close-cookie col-1 pr-0 pl-0"><button class="cookie-close-icon float-right circle-outline" role="button"><span class="sr-only">Close</span></button></div></div>
+    </div></div>
+
 
     <!--
     Javascript Files
@@ -1029,6 +1037,43 @@
         #cookie-banner button {
             margin-left: 2%;
         }
+
+        .cookie-footer {
+
+            position: fixed;
+            bottom: 0;
+            z-index: 9999;
+            width: 100%;
+            padding: 1.46875rem 0;
+            overflow: hidden;
+            font-family: Whitney-Book;
+            font-size: .9375rem;
+            line-height: 1.5rem;
+            color: #0b1f66;
+            background: #fff;
+
+        }
+
+        .close-cookie {
+
+            padding-top: .375rem;
+            text-align: right;
+
+        }
+
+        cookie-footer .close-cookie .cookie-close-icon {
+
+            display: inline-block;
+            width: 1.23125rem;
+            height: 1.23125rem;
+            background: transparent url("images/flyout-close.svg") no-repeat 0;
+            background-position-x: 0px;
+            background-position-y: center;
+            background-position: .125rem;
+            border: 0;
+
+        }
+
     </style>
 
 
