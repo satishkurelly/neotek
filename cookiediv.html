@@ -882,12 +882,12 @@
         <!-- button end-->
     </div>
     <!-- End Back to Top-->
-    <div class="cookie-footer text-left"  id="cookie-banner"><div class="container">
+    <div class="cookie-footer text-left"  id="cookie-banner1"><div class="container">
         <div class="row"><div class="col-11 p-0" role="alert" tabindex="0">
             <div class="alert-cookie-details"><div class="cookie-desc cookie-display-block">
                 <p class="mb-0">By continuing to browse, you consent to our use of cookies. To know more please refer to our&nbsp;
                     <a href="/content/www/en_US/privacy-and-security.html">Cookie and Privacy Policies.</a></p></div></div></div>
-            <div class="close-cookie col-1 pr-0 pl-0"><button class="cookie-close-icon float-right circle-outline" id="yes" role="button"><span class="sr-only">Close</span></button></div></div>
+            <div class="close-cookie col-1 pr-0 pl-0"><button class="cookie-close-icon float-right circle-outline" onclick="cookieYes()" role="button"><span class="sr-only">Close</span></button></div></div>
     </div></div>
 
 
@@ -957,7 +957,7 @@
 
                 // Create button "Yes" with text
                 var newbutton1 = document.createElement("button");
-                newbutton1.setAttribute("id","yes");
+               // newbutton1.setAttribute("id","yes");
                 newbutton1.setAttribute("onclick","cookieYes()");
                 var textButton1 = document.createTextNode(btnYes);
                 newbutton1.appendChild(textButton1);
@@ -1007,12 +1007,13 @@
 
         // Function cookieYes() that installs the cookie
         function cookieYes() {
+           console('inside cookie yes');
             var d = new Date();
             d.setTime(d.getTime() + (cookieLife * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = "cookie_yes=yes; " + expires + "; path=/";
             ''
-            document.getElementById("cookie-banner").style.display = "none";
+            document.getElementById("cookie-banner1").style.display = "none";
         }
 
         // Function cookieNo() that opens the cookie page
