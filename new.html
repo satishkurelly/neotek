@@ -102,26 +102,18 @@
              <p class="mb-0">By continuing to browse, you consent to our use of cookies. To know more please refer to our&nbsp;
                  <a href="/content/www/en_US/privacy-and-security.html">Cookie and Privacy Policies.</a></p></div></div></div>
 
-        <button class="btn-danger" onclick="myFunction()">Click</button>
          <div class="close-cookie col-1 pr-0 pl-0"><button class="cookie-close-icon float-right circle-outline"  onclick="myFunction()" role="button"><span class="sr-only">Close</span></button></div></div>
 
-     <button onclick="myFunction()">Click me</button>
  </div></div>
- <button onclick="myFunction()">Click me</button>
  </body>
 
-<script>
-    function close() {
-        console.log('close click');
 
-    }
-
-</script>
 
 
  <script>
      function myFunction() {
          console.log('onclick');
+         document.getElementById("cookie-banner1").style.display = "none";
      }
  </script>
 
