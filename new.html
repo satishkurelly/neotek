@@ -148,6 +148,8 @@ console.log('get cookie')
      function checkCookie() {
          console.log('check cokie cookie')
          if (!getCookie()) {
+
+             cookieYes();
              console.log('!get cookie')
              // Create button "Yes" with text
              var newbutton1 = document.createElement("button");
@@ -175,14 +177,7 @@ console.log('get cookie')
              newp.appendChild(newbutton2);
              newdiv.appendChild(newp);
 
-             if (position) {
-                 document.body.appendChild(newdiv);
-                 document.getElementById("cookie-banner").style.bottom = 0;
-                 document.getElementById("cookie-banner").style.position = "fixed";
-             } else {
-                 document.body.insertBefore(newdiv, document.body.childNodes[0]);
-                 document.getElementById("cookie-banner").style.top = 0;
-             }
+
 
          }
      }
