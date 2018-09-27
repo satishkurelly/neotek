@@ -919,6 +919,65 @@
     <script type="text/javascript" src="js/custom.js"></script>
 
 
+
+    <style>
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            z-index: 9999;
+            width: 100%;
+            padding: 1.46875rem 0;
+            overflow: hidden;
+            font-family: Whitney-Book;
+            font-size: .9375rem;
+            line-height: 1.5rem;
+            color: #0b1f66;
+            background: #fff;
+        }
+        #cookie-banner button {
+            margin-left: 2%;
+        }
+
+
+        .cookie-footer {
+            position: fixed;
+            bottom: 0;
+            z-index: 9999;
+            width: 100%;
+            padding: 1.46875rem 0;
+            overflow: hidden;
+            font-family: Whitney-Book;
+            font-size: .9375rem;
+            line-height: 1.5rem;
+            color: #0b1f66;
+            background: #fff;
+
+
+        }
+
+        .close-cookie {
+
+            padding-top: .375rem;
+            text-align: right;
+
+        }
+
+        .cookie-footer .close-cookie .cookie-close-icon {
+
+            display: inline-block;
+            width: 1.23125rem;
+            height: 1.23125rem;
+            background: transparent url("images/flyout-close1.svg") no-repeat 0;
+            background-position-x: 0px;
+            background-position-y: center;
+            background-position: .125rem;
+            border: 0;
+
+        }
+
+    </style>
+
     <script>
         // Insert the message to display
         var message = "This website uses cookie, are you agree?";
@@ -993,14 +1052,9 @@
         }
 
 
-        function close() {
-            document.getElementById("cookie-banner1").style.display = "none";
-            console.log('insode hte close ');
-        }
-
         // Function cookieYes() that installs the cookie
         function cookieYes() {
-           console('inside cookie yes');
+            console('inside cookie yes');
             var d = new Date();
             d.setTime(d.getTime() + (cookieLife * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
@@ -1014,68 +1068,12 @@
             location.href = coockieUrl;
         }
 
-
+        function close() {
+            document.getElementById("cookie-banner1").style.display = "none";
+            console.log('insode hte close ');
+        }
 
     </script>
-
-    <style>
-
-        #cookie-banner {
-            position: fixed;
-            bottom: 0;
-            z-index: 9999;
-            width: 100%;
-            padding: 1.46875rem 0;
-            overflow: hidden;
-            font-family: Whitney-Book;
-            font-size: .9375rem;
-            line-height: 1.5rem;
-            color: #0b1f66;
-            background: #fff;
-        }
-        #cookie-banner button {
-            margin-left: 2%;
-        }
-
-
-        .cookie-footer {
-            position: fixed;
-            bottom: 0;
-            z-index: 9999;
-            width: 100%;
-            padding: 1.46875rem 0;
-            overflow: hidden;
-            font-family: Whitney-Book;
-            font-size: .9375rem;
-            line-height: 1.5rem;
-            color: #0b1f66;
-            background: #fff;
-
-
-        }
-
-        .close-cookie {
-
-            padding-top: .375rem;
-            text-align: right;
-
-        }
-
-        .cookie-footer .close-cookie .cookie-close-icon {
-
-            display: inline-block;
-            width: 1.23125rem;
-            height: 1.23125rem;
-            background: transparent url("images/flyout-close1.svg") no-repeat 0;
-            background-position-x: 0px;
-            background-position-y: center;
-            background-position: .125rem;
-            border: 0;
-
-        }
-
-    </style>
-
 
 
 </div>
