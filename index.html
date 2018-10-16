@@ -58,9 +58,9 @@
                <nav class="navbar navbar-expand-lg">
                   <div class="navbar-brand navbar-header">
                      <div class="logo">
-                        <a href="index.html">
+                       <!-- <a href="index.html">
                            <img src="images/neoLogo.png" alt="">
-                        </a>
+                        </a>-->
                      </div>
                      <!-- logo end-->
                   </div>
@@ -263,13 +263,12 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-6 about-desc">
-               <h2 class="column-title title-small"><span>About us</span>Different kind of Financial firm</h2>
-               <p>The mission of the Bizipress Financial Planning Association is to setup, promote and implement high quality
-                  standards for competence and ethical behavior for the financial advisory sector.</p>
+               <h2 class="column-title title-small"><span>About us</span>Different kind of Consulting  firm</h2>
+               <p>As a trusted staffing partner, Neotek Sol that help our customers to transform their business and achieve meaningful results. From strategy and custom application development through application management – our technology and digital experience services are tailored to meet each unique need of our customers. Our staffing solutions bring specialized skills to complement our customers workforce and project requirements. It has always been our mission to deliver the highest quality services with exceptional customer service. Our mission is a commitment to our customers, partners, employees and shareholders. It shapes NEOTEK culture and defines the character of our company – past, present and future.</p>
                <div class="gap-15"></div>
-               <p>It’s an approach that consistently drives best decisions. And Bizipress, we carry out those decisions free
-                  from the pressure of product bias.</p>
-               <div class="ceo-signature">
+              <!-- <p>It’s an approach that consistently drives best decisions. And Bizipress, we carry out those decisions free
+                  from the pressure of product bias.</p>-->
+             <!--  <div class="ceo-signature">
                   <div class="ceo-desc">
                      <img class="img-fluid" src="images/pages/profile_image.png" alt="">
                      <div class="ceo-designation">
@@ -277,9 +276,9 @@
                         <small>CEO Bizipress</small>
                      </div>
                   </div>
-                  <!-- Desc End-->
+                  &lt;!&ndash; Desc End&ndash;&gt;
                   <img class="img-fluid" src="images/pages/sign.png" alt="">
-               </div>
+               </div>-->
                <!-- Signature End-->
             </div>
             <!-- Col end-->
@@ -876,13 +875,6 @@
    <!-- Footer end-->
 
 
-   <div class="cookiewarning bg-warning">
-      <h3>Stiamo utilizzando i cookie</h3>
-      <p>Il sito utilizza i cookie per ricordare le impostazioni e le statistiche. Il sito utilizza i cookie da Google Analytics per misurare il traffico sul sito.</p>
-      <span class="btn btn-warning btn-xl">Accettare</span>
-   </div>
-
-
    <div class="back-to-top affix" id="back-to-top" data-spy="affix" data-offset-top="10">
       <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i>
          <!-- icon end-->
@@ -917,128 +909,6 @@
    <script type="text/javascript" src="js/gmap3.js"></script>
    <!-- Template custom-->
    <script type="text/javascript" src="js/custom.js"></script>
-
-
-   <script>
-       // Insert the message to display
-       var message = "This website uses cookie, are you agree?";
-       // Insert the Url with the page cookies description
-       var coockieUrl = "cookie.html";
-       // Insert number of days until the cookie expires
-       var cookieLife = 60;
-       // Text of buttons
-       var btnYes = "Yes, I agree";
-       var btnNo = "No, give me more info";
-       // Add banner to the top or bottom of the page
-       var position = true;    // Default is bottom
-       // To active extra feature give true
-       var anchor = false;    // User accept when a link is clicked
-       var scroll = false;    // User accept when the page is scrolled
-
-       // Event that triggers the cookie banner
-       document.body.addEventListener("load", checkCookie());
-
-       // This function checks if the user has already accepted the cookies
-       function getCookie() {
-           var name = "cookie_yes" + "=";
-           var ca = document.cookie.split(';');
-           for(var i = 0; i < ca.length; i++) {
-               var c = ca[i];
-               while (c.charAt(0)==' ') c = c.substring(1);
-               if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-           }
-           return "";
-       }
-
-       // If cookie has not been accept, show banner
-       function checkCookie() {
-
-           if (!getCookie()) {
-
-               // Create button "Yes" with text
-               var newbutton1 = document.createElement("button");
-               newbutton1.setAttribute("id","yes");
-               newbutton1.setAttribute("onclick","cookieYes()");
-               var textButton1 = document.createTextNode(btnYes);
-               newbutton1.appendChild(textButton1);
-
-               // Create button "More Info" with text
-               var newbutton2 = document.createElement("button");
-               newbutton2.setAttribute("id","no");
-               newbutton2.setAttribute("onclick","cookieNo()");
-               var textButton2 = document.createTextNode(btnNo);
-               newbutton2.appendChild(textButton2);
-
-               // Create p with message
-               var newp = document.createElement("p");
-               var text = document.createTextNode(message);
-               newp.appendChild(text);
-
-               // Create banner
-               var newdiv = document.createElement("div");
-               newdiv.setAttribute("id","cookie-banner");
-               newp.appendChild(newbutton1);
-               newp.appendChild(newbutton2);
-               newdiv.appendChild(newp);
-
-               if (position) {
-                   document.body.appendChild(newdiv);
-                   document.getElementById("cookie-banner").style.bottom = 0;
-                   document.getElementById("cookie-banner").style.position = "fixed";
-               } else {
-                   document.body.insertBefore(newdiv, document.body.childNodes[0]);
-                   document.getElementById("cookie-banner").style.top = 0;
-               }
-
-               // EXTRA FEATURES
-               // Acceptance of cookie law with a click in every "a" tag
-               if (anchor) {
-                   var a = document.getElementsByTagName("a");
-                   for(var i = 0; i < a.length; i++) {
-                       a[i].setAttribute("onclick","cookieYes()");
-                   }
-               }
-               // Acceptance of cookie law with the scroll of the page
-               if (scroll) {
-                   document.body.setAttribute("onscroll","cookieYes()");
-               }
-           }
-       }
-
-       // Function cookieYes() that installs the cookie
-       function cookieYes() {
-           var d = new Date();
-           d.setTime(d.getTime() + (cookieLife * 24 * 60 * 60 * 1000));
-           var expires = "expires=" + d.toUTCString();
-           document.cookie = "cookie_yes=yes; " + expires + "; path=/";
-           ''
-           document.getElementById("cookie-banner").style.display = "none";
-       }
-
-       // Function cookieNo() that opens the cookie page
-       function cookieNo() {
-           location.href = coockieUrl;
-       }
-
-
-
-   </script>
-
-   <style>
-
-      #cookie-banner {
-         background-color: rgba(0,0,0,0.9);
-         color: #FFF;
-         width: 100%;
-         height: 10%;
-         z-index: 10;
-         padding: 1%;
-      }
-      #cookie-banner button {
-         margin-left: 2%;
-      }
-   </style>
-
 
 
 </div>
