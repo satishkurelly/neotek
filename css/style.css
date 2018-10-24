@@ -4089,7 +4089,7 @@ p.panel-title a.collapsed {
 /*-- Footer top --*/
 .footer-top {
   position: absolute;
-  top: -60px;
+  top: 0px;
   z-index: 1;
   margin: 0 auto;
   width: 100%;
@@ -4138,6 +4138,7 @@ p.panel-title a.collapsed {
   color: #8c93a5;
   position: relative;
   padding: 120px 0 20px;
+  top: 60px;
 }
 .footer-main.bg-overlay:after {
   background-color: rgba(0, 8, 29, 0.9);

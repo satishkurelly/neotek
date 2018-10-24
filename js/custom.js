@@ -1,21 +1,3 @@
-/*
-	Template Name: BiziPress - Finance, Consulting, Business HTML Template
-	Author: Tripples
-	Author URI: https://themeforest.net/user/tripples
-	Description: BiziPress - Finance, Consulting, Business HTML Template
-	Version: 1.0
-
-	1. Fixed header
-	2. Main slideshow
-	3. Site search
-	4. Owl Carousel
-	5. Video popup
-	6. Counter
-	7. Contact form
-	8. Back to top
-  
-*/
-
 
 jQuery(function ($) {
    "use strict";
@@ -78,8 +60,8 @@ jQuery(function ($) {
    if ($('#map').length > 0) {
 
       var contactmap = {
-         lat: -37.816218,
-         lng: 144.964068
+         lat: 36.1626638,
+         lng: -86.7816016
       };
 
       $('#map')
@@ -231,7 +213,7 @@ jQuery(function ($) {
 
          .infowindow({
             position: contactmap,
-            content: "16122 Collins Street West. Victoria"
+            content: "403 Lazy Cree Lane, Nashville, TN - 37211"
          })
 
          .then(function (infowindow) {
